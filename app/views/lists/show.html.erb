@@ -1,0 +1,16 @@
+<div class="heading">
+  <h1><%=@lists.name%></h1>
+  <p><%= link_to "List menu", lists_path%></p>
+</div>
+
+<div class = container>
+  <ul class = cards_list><%@lists.movies.each do |m|%>
+    <li class = "movie_card">
+      <div>
+        <%=image_tag "#{m.poster_url}", alt:"poster", :class => "poster"%>
+        <%=m.title %>
+      </div>
+    </li>
+    <%end%>
+  </ul>
+</div>  

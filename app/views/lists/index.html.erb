@@ -1,0 +1,14 @@
+<div class="navbar-lewagon"></div>
+<div class="heading">
+  <h1>Movie Listing</h1>
+  <p><%=link_to "new list", lists_new_path%></p>
+</div>
+
+<div class= "container">
+  <ul class="cards_list">
+    <%@lists.each do |list|%>
+    <div class="card"><li><%= link_to "#{list.name}", list_path(list.id), :class => "card_link" %></li></div>
+    <%end%>
+  </ul>
+</div>
+
